@@ -16,9 +16,9 @@ function receiveUserActionCreator(users) {
 function asyncRegisterUser({ name, email, password }) {
   return async () => {
     try {
-      api.register({ name, email, password });
+      await api.register({ name, email, password });
     } catch (error) {
-      alert(error.message);
+      alert(error.message)
     }
   };
 }
